@@ -1,5 +1,5 @@
 # === Variables ===
-NAME        := zombie
+NAME        := zombieHorde
 CXX         := c++
 CXXFLAGS    := -Wall -Wextra -Werror -std=c++98 -Iinc
 
@@ -10,8 +10,7 @@ OBJ_DIR     := obj
 SRCS        := \
 	$(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/Zombie.cpp \
-	$(SRC_DIR)/newZombie.cpp \
-	$(SRC_DIR)/randomChump.cpp
+	$(SRC_DIR)/zombieHorde.cpp
 
 OBJS        := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 DEPS        := $(OBJS:.o=.d)

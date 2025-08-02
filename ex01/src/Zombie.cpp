@@ -12,10 +12,18 @@ Zombie::Zombie(std::string name) : name(name)
 
 Zombie::~Zombie()
 {
-    std::cout << "Zombie " << this->name << " is destroyed." << std::endl;
+    if (name.compare("Default") == 0)
+        std::cout << "A nameless Zombie dies once again." << std::endl;
+    else
+    std::cout << "Zombie " << this->name << " dies once again." << std::endl;
 }
 
 void Zombie::announce() const
 {
     std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(const std::string &name)
+{
+    this->name = name;
 }
